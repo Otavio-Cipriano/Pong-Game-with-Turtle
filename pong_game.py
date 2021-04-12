@@ -44,8 +44,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0,0)
-ball.dx = 0.4
-ball.dy = 0.4
+ball.dx = 1.1
+ball.dy = 1.1
 
 # Pen
 pen = turtle.Turtle()
@@ -96,24 +96,24 @@ while running:
     # Ball Border checking
     if ball.ycor() > 290:
         ball.sety(290)
-        ball.dy *= -0.8
+        ball.dy *= -1
         winsound.PlaySound('C:/Windows/Media/chimes.wav', winsound.SND_ASYNC)
 
     if ball.ycor() < -290:
         ball.sety(-290)
-        ball.dy *= -0.8
+        ball.dy *= -1
         winsound.PlaySound('C:/Windows/Media/chimes.wav', winsound.SND_ASYNC)
     
     if ball.xcor() > 390:
         ball.goto(0,0)
-        ball.dx *= -0.8
+        ball.dx *= -1
         score_a += 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier", 20, 'normal'))
     
     if ball.xcor() < -390:
         ball.goto(0,0)
-        ball.dx *= -0.8
+        ball.dx *= -1
         score_b += 1
         pen.clear()
         pen.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier", 20, 'normal'))
